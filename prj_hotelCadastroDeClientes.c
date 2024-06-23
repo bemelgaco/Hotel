@@ -30,15 +30,11 @@ void scanClean() {
     printf("Nome do usuário: ");
     // Usa fgets para ler a entrada e armazenar em cliente.nome
     fgets(cliente.nome, sizeof(cliente.nome), stdin);
-    // Remove o caractere de nova linha
-    //remove_newline(cliente.nome);
 
     // Obtém o endereço do usuário
     printf("Endereço: ");
     // Usa fgets para ler a entrada e armazenar em cliente.endereco
     fgets(cliente.endereco, sizeof(cliente.endereco), stdin);
-    // Remove o caractere de nova linha
-    //remove_newline(cliente.endereco);
 
     // Obtém o telefone do usuário
     printf("Informe o seu telefone: ");
