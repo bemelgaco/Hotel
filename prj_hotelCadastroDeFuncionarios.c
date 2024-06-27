@@ -1,4 +1,4 @@
-// Online C compiler to run C program online
+
 #include <stdio.h>
 #include<stdlib.h>
 #include <string.h>
@@ -34,15 +34,17 @@ fgets(funcionario.nome, sizeof(funcionario.nome),stdin);
 //Obtem o telefone do funcionário
 printf("digite o telefone do funcionário: ");
 scanf("%d",&funcionario.telefone);
-
+scanClean();
 
 //obtém o cargo do funcionário
-printf("digite o cargo do funcionário: ");
-fgets(funcionario.cargo,sizeof(funcionario.cargo),stdin);
+printf("digite o cargo do funcionário:");
+fgets(funcionario.cargo, sizeof(funcionario.cargo),stdin);
+
+
 
 //obtém o salario do funcionário
 printf("digite o salário do funcionário: ");
-("%f",&funcionario.salario);
+scanf("%2f",&funcionario.salario);
 
 //imprime os dados do usuário
     scanClean();
@@ -59,18 +61,18 @@ int main (void){
     
     printf("Numero do funcionario: \n");
     scanf("%d", &cadastro);
-    
     printf("\n-----Lendo os dados do funcionario-----\n\n");
     printf("nome.........: %s\n",listaFuncionarios[cadastro].nome);
     printf("telefone.....: %d\n",listaFuncionarios[cadastro].telefone);
     printf("cargo........: %s\n",listaFuncionarios[cadastro].cargo);
-    printf("salario......: %f\n",listaFuncionarios[cadastro].salario);
+    printf("salario......: %.2f\n",listaFuncionarios[cadastro].salario);
     printf("codigo.......: %d\n",listaFuncionarios[cadastro].codigo);
+    
+    
     
     return 0;
     
 }
-
 
 
 
