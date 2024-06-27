@@ -37,8 +37,46 @@ scanf("%d",&funcionario.telefone);
 scanClean();
 
 //obtém o cargo do funcionário
-printf("digite o cargo do funcionário:");
-fgets(funcionario.cargo, sizeof(funcionario.cargo),stdin);
+printf("digite o numero do cargo:\n");
+printf("numero 1 - recepcionista\n");
+printf("numero 2 - auxiliar de limpeza\n");
+printf("numero 3 - garçom\n");
+printf("numero 4 - gerente\n");
+
+int cargo = 0;
+bool erro = true;
+
+while(erro){
+    
+    printf("digite  o número do cargo do funcionário:");
+    scanf("%d",&cargo);
+    
+    switch (cargo) {
+            case 1:
+                strcpy(funcionario.cargo, "Recepcionista");
+                erro = false;
+                break;
+
+            case 2:
+                strcpy(funcionario.cargo, "Auxiliar de Limpeza");
+                erro = false;
+                break;
+
+            case 3:
+                strcpy(funcionario.cargo, "Garçom");
+                erro = false;
+                break;
+
+            case 4:
+                strcpy(funcionario.cargo, "Gerente");
+                erro = false;
+                break;
+
+            default:
+                printf("Opção inválida. Tente novamente.\n");
+                break;
+        }
+}
 
 
 
@@ -73,6 +111,3 @@ int main (void){
     return 0;
     
 }
-
-
-
